@@ -42,7 +42,6 @@ function drawGrid(gridSize){
     for(i = 0; i < gridSize * gridSize; i++){
         const gridSquare = document.createElement('div')
         gridSquare.classList.add('gridSquare')
-        gridSquare.classList.add('active')
         gridSquare.addEventListener('mouseenter', function () {
             changeSquareColor(this)
         })

@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1>Etch-a-Sketch</h1>
+    <div class="container">
+        <div class="options">
+            <input type="color" id="colorPicker">Select Color</input>
+            <button id="colorBtn">Color</button>
+            <button id="rainbowBtn">Rainbow</button>
+            <button id="eraserBtn">Eraser</button>
+            <button id="clearBtn">Clear</button>
+            <input type="range" min="16" max="100" value="16" id="gridSize">
+            <p class="sliderValue" id="sliderVal">16 x 16</p>
+        </div>
+        <div class="grid">
+
+        </div>
+    </div>
 </body>
 </html>

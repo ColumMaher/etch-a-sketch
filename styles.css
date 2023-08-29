@@ -5,6 +5,7 @@ h1 {
 
 .container{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .options {
@@ -12,6 +13,11 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+.colorPicker {
+    height: 80px;
+    width: 80px;
 }
 
 button {
@@ -27,6 +33,10 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    background-color: grey;
+}
+
 .sliderValue {
     text-align: center;
     font-size: 24px;
@@ -34,5 +44,12 @@ button {
 }
 
 .grid {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    border: solid 2px black;
+}
 
+.gridSquare {
+    border: dotted 1px black;
 }

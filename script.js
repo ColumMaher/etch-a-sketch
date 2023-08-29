@@ -20,7 +20,9 @@ gridSizeSlider.addEventListener('input', function(){
 })
 
 clearBtn.addEventListener('click', function(){
-
+    clearGrid();
+    console.log(gridSizeSlider.value)
+    drawGrid(gridSizeSlider.value)
 })
 
 toggleBtn.addEventListener('click', function(){
@@ -50,6 +52,10 @@ function drawGrid(gridSize){
 
 function resetGrid(){
     grid.innerHTML = '';
+}
+
+function clearGrid(){
+    resetGrid();
 }
 
 function toggleSquareBorder(){

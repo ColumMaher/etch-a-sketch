@@ -51,5 +51,9 @@ button:hover {
 }
 
 .gridSquare {
-    border: dotted 1px black;
+    border: none;
+}
+
+.active {
+    border: dotted 1px black; 
 }

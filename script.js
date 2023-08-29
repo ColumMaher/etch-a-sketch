@@ -6,6 +6,9 @@ const grid = document.getElementById('grid');
 const gridSizeSlider = document.getElementById('gridSize');
 const gridSizeValue = document.getElementById('sliderVal');
 
+const clearBtn = document.getElementById('clearBtn');
+const toggleBtn = document.getElementById('toggleBtn');
+
 colorPicker.addEventListener('input', function() {
     color = this.value;
     console.log(color)
@@ -16,9 +19,18 @@ gridSizeSlider.addEventListener('input', function(){
     gridSizeValue.textContent = gridSizeSlider.value + " x " + gridSizeSlider.value
 })
 
+clearBtn.addEventListener('click', function(){
+
+})
+
+toggleBtn.addEventListener('click', function(){
+    toggleSquareBorder()
+})
+
 function changeSquareColor(gridSquare){
     gridSquare.style.backgroundColor = `${color}`;
 }
+
 
 function drawGrid(gridSize){
 
@@ -28,11 +40,24 @@ function drawGrid(gridSize){
     for(i = 0; i < gridSize * gridSize; i++){
         const gridSquare = document.createElement('div')
         gridSquare.classList.add('gridSquare')
+        gridSquare.classList.add('active')
         gridSquare.addEventListener('mouseenter', function () {
             changeSquareColor(this)
         })
         grid.appendChild(gridSquare)
     }
+}
+
+function resetGrid(){
+    grid.innerHTML = '';
+}
+
+function toggleSquareBorder(){
+    const gridSquare = document.querySelectorAll('.gridSquare');
+    console.log(gridSquare)
+    gridSquare.forEach(square => {
+        square.classList.toggle('active')
+    })
 }
 
 drawGrid(MIN_GRID_SIZE)

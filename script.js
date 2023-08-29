@@ -19,6 +19,11 @@ gridSizeSlider.addEventListener('input', function(){
     gridSizeValue.textContent = gridSizeSlider.value + " x " + gridSizeSlider.value
 })
 
+gridSizeSlider.addEventListener('mouseup', function(){
+    clearGrid()
+    drawGrid(gridSizeSlider.value)
+})
+
 clearBtn.addEventListener('click', function(){
     clearGrid();
     console.log(gridSizeSlider.value)
